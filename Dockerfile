@@ -8,7 +8,7 @@ HEALTHCHECK --start-period=2s --interval=5s --timeout=3s \
 
 VOLUME /srv
 EXPOSE 80
-
+RUN echo 'application/vnd.android.package-archive         apk' >> /etc/mime.types
 COPY .docker.json /.filebrowser.json
 COPY filebrowser /filebrowser
 
